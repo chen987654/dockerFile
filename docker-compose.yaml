@@ -1,0 +1,12 @@
+version: '3'
+services:
+  svn:
+    restart: always
+    image: 作成のimages(dockerfile作成)
+    container_name: subversion
+    privileged: true
+    ports:
+      - '3690:3690'
+    volumes:
+      - ./data:/var/opt/svn
+    restart: always
