@@ -1,0 +1,9 @@
+docker build -t csv-20240913 .
+
+docker run --name Hibiki02 -d   -p 3690:3690  csv-20240913
+
+svnadmin dump svn > bak/123.jump
+
+svn co svn://127.0.0.1:3690/svn
+
+svnadmin load  svn < bak/123.jump
